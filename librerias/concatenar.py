@@ -16,7 +16,7 @@ def concatenar(archivo, nombre, variable):
         ciclo_lecto_escritura(variable, leer)
         leer.close()
         
-    def inicia_concatenado(nombre, variable):
+    def inicia_concatenado(nombre, variable):   
         escribe = open(nombre, "w")
         escribe.write(variable + " = \"\"\n")
         escribe.close()
@@ -45,7 +45,7 @@ def concatenar(archivo, nombre, variable):
         
     def write_print(variable):    
         escribe = open(nombre, "a")
-        escribe.write("print("+ variable +")\nfin = input("")")
+        escribe.write("print("+ variable.rstrip("\n") +")\nfin = input("")")
         escribe.close()
         
     ejecutar(archivo, nombre, variable)
@@ -63,7 +63,6 @@ nombre = "productos/resultado.py"
 variable = "variable"
 lbr.concatenar(archivo, nombre, variable)
 """
-
 
 
 
